@@ -6,8 +6,7 @@
 // THEN I am presented with a series of prompts for password criteria
 // WHEN prompted for password criteria
 // THEN I select which criteria to include in the password
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
+
 // WHEN asked for character types to include in the password
 // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 // WHEN I answer each prompt
@@ -27,4 +26,11 @@ const symbolsChars = ["!", "@", "#", "$", "%", "&", "*", "(", ")"];
 function generatePasswordOptions() {
   let length = prompt("Please enter length of password between 8 and 128 characters.");
   // First alert should state amount of characters allowed for password generation
+  if (length < 8 || length > 128) {
+    alert("Length must be between 8 and 128 characters!!");
+    return null;
+    // New alert to prompt user that they have input an invalid amount of characters pre defined
+  }
+  let lowerCase = confirm("Do you want to include lowercase characters?");
+  // Asks user if ok or cancel on object question
 }
