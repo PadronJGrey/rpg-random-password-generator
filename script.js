@@ -23,3 +23,8 @@ const lowercaseChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "
 const uppercaseChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 const numbersChars = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 const symbolsChars = ["!", "@", "#", "$", "%", "&", "*", "(", ")"];
+
+function generatePasswordOptions() {
+  let length = prompt("Please enter length of password between 8 and 128 characters.");
+  // First alert should state amount of characters allowed for password generation
+}
