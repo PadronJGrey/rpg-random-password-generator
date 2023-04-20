@@ -52,6 +52,7 @@ function generatePassword() {
   let result = [];
   let randomCharacters = [];
   let altCharacters = [];
+  console.log(options)
   if (options.lowerCase1) {
     randomCharacters.push(getRandom(lowercaseChars));
     altCharacters = altCharacters.concat(lowercaseChars);
@@ -66,8 +67,8 @@ function generatePassword() {
     altCharacters = altCharacters.concat(numbersChars);
   }
   if (options.specialCharacters1) {
-    randomCharacters.push(getRandom(symbolsChar));
-    altCharacters = altCharacters.concat(symbolsChar);
+    randomCharacters.push(getRandom(symbolsChars));
+    altCharacters = altCharacters.concat(symbolsChars);
     // The generator can now pull from all arrays for password generation
   }
   for (var i = 0; i < options.length1; i++) {
