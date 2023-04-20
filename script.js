@@ -65,3 +65,18 @@ function getRandom(arr) {
   return randomElement;
 }
 
+function generatePassword() {
+  let options = generatePasswordOptions();
+  let result = [];
+  let randomCharacters = [];
+  let altCharacters = [];
+  if(options.lowerCase1) {
+    randomCharacters.push(getRandom(lowercaseChars));
+    altCharacters = altCharacters.concat(lowercaseChars);
+  }
+  if(options.upperCase1) {
+    randomCharacters.push(getRandom(uppercaseChars));
+    altCharacters = altCharacters.concat(uppercaseChars);
+    // The generator is now pulling from the lower and uppercase "let" from the global array to generate a password
+  }
+}
