@@ -57,3 +57,11 @@ function generatePasswordOptions() {
   };
   return passwordOptions;
 }
+
+// Function for actual random password generator
+function getRandom(arr) {
+  let randomIndex = Math.floor(Math.random() * arr.length);
+  let randomElement = arr[randomIndex];
+  return randomElement;
+}
+
