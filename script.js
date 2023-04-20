@@ -32,5 +32,19 @@ function generatePasswordOptions() {
     // New alert to prompt user that they have input an invalid amount of characters pre defined
   }
   let lowerCase = confirm("Do you want to include lowercase characters?");
-  // Asks user if ok or cancel on object question
+  let upperCase = confirm("Do you want to include uppercase characters?");
+  let numeric = confirm("Would you like to include numbers?");
+  let specialCharacters = confirm("Would you like to use special characters?");
+   // Asks user if ok or cancel on object question
+
+  if (
+    lowerCase === false &&
+    upperCase === false &&
+    numeric === false &&
+    specialCharacters === false
+  ) {
+    alert("User should select at least one character type!!!");
+    return null;
+    // Alerts user they must choose at least one character type
+  }
 }
