@@ -47,4 +47,13 @@ function generatePasswordOptions() {
     return null;
     // Alerts user they must choose at least one character type
   }
+
+  let passwordOptions = {
+    length1: length,
+    lowerCase1: lowerCase,
+    upperCase1: upperCase,
+    numeric1: numeric,
+    specialCharacters1: specialCharacters,
+  };
+  return passwordOptions;
 }
