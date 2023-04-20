@@ -70,13 +70,31 @@ function generatePassword() {
   let result = [];
   let randomCharacters = [];
   let altCharacters = [];
-  if(options.lowerCase1) {
+  if (options.lowerCase1) {
     randomCharacters.push(getRandom(lowercaseChars));
     altCharacters = altCharacters.concat(lowercaseChars);
   }
-  if(options.upperCase1) {
+  if (options.upperCase1) {
     randomCharacters.push(getRandom(uppercaseChars));
     altCharacters = altCharacters.concat(uppercaseChars);
     // The generator is now pulling from the lower and uppercase "let" from the global array to generate a password
   }
+  if (options.numeric1) {
+    randomCharacters.push(getRandom(numbersChars));
+    altCharacters = altCharacters.concat(numbersChars);
+  }
+  if (options.specialCharacters1) {
+    randomCharacters.push(getRandom(symbolsChar));
+    altCharacters = altCharacters.concat(symbolsChar);
+    // The generator can now pull from all arrays for password generation
+  }
+  for (var i = 0; i < options.length1; i++) {
+    var altCharacter = getRandom(altCharacters);
+    result.push(altCharacter);
+  }
+  for (var i = 0; i < randomCharacters.length1; i++) {
+    result[i] = randomCharacters[i];
+  }
+  return result.join("");
 }
+// Function is done for overall generation of passwords
